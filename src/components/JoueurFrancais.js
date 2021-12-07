@@ -68,7 +68,7 @@ const JoueurFrancais = () => {
 
     return (
         <div className="widget contenerPie">
-            <h2>Les joueurs Francais en championnat</h2>
+            <h2>Les joueurs Français en championnat</h2>
             <div className="Pie">
                 <Pie data={data} />
             </div>
