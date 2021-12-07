@@ -2,7 +2,7 @@ import React, {useEffect, useState} from 'react';
 import axios from "axios";
 
 const MeilleurJoueur = () => {
-
+//Requêtes client
     const [data, setData] = useState([]);
     axios.get('../../bdd.json').then((res) => console.log(res.data));
     useEffect(() => {
@@ -12,7 +12,7 @@ const MeilleurJoueur = () => {
 
     console.log(data);
     }, []);
-
+//Récupération des logos de clubs et nom du meilleur joueur
     var lesClubs = []
     var i;
     var j;

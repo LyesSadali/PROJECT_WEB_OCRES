@@ -2,7 +2,7 @@ import React from 'react';
 import axios from 'axios';
 
 export default class CallApi extends React.Component {
-
+//Nouveau constructeur 
 	constructor(props) {
 		super(props);
 		this.state = { joueur: "",
@@ -11,11 +11,11 @@ export default class CallApi extends React.Component {
 					   poste:""
 					 };
 	}
-
+//API KEY
 	recupInfoJoueurs() {
 		var myHeaders = new Headers();
 		myHeaders.append("X-Auth-Token","f9475c7dc1df466b965ffe2a72d2f4a7");
-
+//Requête GET
 		var obj = {
 			method: "GET",
 			headers: myHeaders,
@@ -23,7 +23,7 @@ export default class CallApi extends React.Component {
 			cache: "default"
 		};
 
-		
+		//Récupération des éléments souhaités
 		fetch("https://api.football-data.org//v2/players/44",obj)
 			.then(res => res.json())
 			.then(res => this.setState({ 

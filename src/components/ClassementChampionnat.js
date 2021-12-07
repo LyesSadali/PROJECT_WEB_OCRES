@@ -4,7 +4,7 @@ import { Bar } from "react-chartjs-2"
 
 
 const ClassementChampionnat = () => {
-
+//Requetes Client
     const [data, setData] = useState([]);
     axios.get('../../bdd.json').then((res) => console.log(res.data));
 useEffect(() => {
@@ -14,7 +14,8 @@ useEffect(() => {
 
    console.log(data);
 }, []);
-   
+
+//Récupération du logo des équipes avec le nombre de points correspondant
 var lesClubs = []
 var i;
 var j;
@@ -28,6 +29,7 @@ for(i=0;i<data.length;i++){
     }
 }
 sort(lesClubs)
+//Tri par ordre décroissant en points pour le classement
 function sort(tab){
     for(var i = 0; i < tab.length; i++){
       //stocker l'index de l'élément maximum

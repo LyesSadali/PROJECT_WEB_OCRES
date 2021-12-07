@@ -3,6 +3,7 @@ import axios from "axios";
 
 const RechercheMatchs = () => {
     const [data, setData] = useState([]);
+    //Requêtes Client
     axios.get('../../bdd.json').then((res) => console.log(res.data));
     useEffect(() => {
         axios.get('../../bdd.json').then((res) => setData(res.data));

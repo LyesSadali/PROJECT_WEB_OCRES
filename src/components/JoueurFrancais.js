@@ -3,6 +3,7 @@ import axios from "axios";
 import { Chart as ChartJS } from 'chart.js/auto'
 import { Pie }             from 'react-chartjs-2'
 
+//Fonction dégradé de couleurs
 function colorArc(n)
 			{
 				var variante = (n%1530)/255;
@@ -36,7 +37,7 @@ function colorArc(n)
 			}
 
 const JoueurFrancais = () => {
-
+//Requêtes client
     const [info, setData] = useState([]);
     axios.get('../../bdd.json').then((res) => console.log(res.data));
     useEffect(() => {
@@ -45,7 +46,7 @@ const JoueurFrancais = () => {
     console.log(info);
     }, []);
 
-
+//Récupération des noms de championnats, le pourcentage de français et couleur pour le dégradé
     var nomChamp = []
     var joueurFrance = []
     var couleur = []
@@ -55,7 +56,7 @@ const JoueurFrancais = () => {
         joueurFrance[joueurFrance.length] = parseInt(info[i].pourcentageFrancais, 10);
         couleur[couleur.length] = colorArc(i*220);
     }
-
+//Affichage graphique
     const data = {
         labels: nomChamp,
         datasets: [{
