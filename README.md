@@ -21,3 +21,29 @@ Les instructions sont à retrouver dans le pdf instruction.pdf.
 **Le non respect de ces instructions entraînera des pertes de points alors prenez le temps de tout lire et de poser des questions si vous ne comprenez pas**
 
 Pour rappel, la probabilité de recevoir une réponse à un mail envoyé quelques heures avant le rendu est très proche de 0.
+
+## Démarrer le projet
+
+## Etape 1
+
+Premièrement, si les node_modules ne sont pas installés, il faut se rendre dans la racine du projet (ouvrir PROJECT_WEB_OCRES dans le terminal) et taper la commande suivante : 
+
+npm install 
+
+Si les nodes_modules sont installés, il faut sauter cette étape. 
+
+## Etape 2
+
+Pour démarrer notre API, il faut se rendre dans  la racine du projet (ouvrir PROJECT_WEB_OCRES dans le terminal) et taper la commande suivante : 
+
+node FootApi.js
+
+## Etape 3
+
+Ensuite, il faut démarrer le projet en se rendant dans source (ouvrir src dans le terminal) et taper la commande suivante :
+
+npm start
+
+Et voilà , vous avez accès à Football AMSL !!!
+
+

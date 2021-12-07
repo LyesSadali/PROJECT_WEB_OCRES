@@ -1,0 +1,98 @@
+body
+{
+    background:no-repeat url(pelouse.jpg) center; 
+    overflow: auto;
+}
+
+.lesWidgets
+{
+    
+
+    display:flex;
+    width:calc(100vw - 20px);
+    height:calc(100vh - 20px);
+    overflow: auto;
+
+    .coloneWidgets1
+    {
+        max-height:95vw; 
+    }
+
+    .coloneWidgets1,.coloneWidgets2
+    {
+        display:flex;
+        flex-direction:column;
+        overflow: auto;
+
+        flex:1;
+
+        .widget
+        {
+            flex:1;
+ 
+            overflow:auto;
+              
+            background-color:rgba(255,255,255,0.8); 
+            border-radius:20px;
+
+            margin:10px;
+
+            @media (max-width: 990px) {
+                overflow:auto; 
+                min-height:250px; 
+            }
+        }
+
+       
+    }
+
+    @media (max-width: 990px) {
+        flex-direction:column;
+    }
+    
+}
+
+.ligneClassement
+{
+    display:flex;
+    justify-content: space-around;
+
+    .point{
+        font-size:40px;
+    }
+
+    .logo{
+        width:40%;
+    }
+}
+
+h2
+{
+    text-align:center;
+    font-size:40px;
+}
+
+.Pie
+{
+    width:50%;
+    transition: all 0.4s ease-out;
+}
+.Pie:hover
+{
+    width:90%;
+}
+
+.contenerPie
+{
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+    flex-direction:column;
+}
+
+p
+{
+    font-size:30px;
+    padding:0;
+    margin:0;
+}
